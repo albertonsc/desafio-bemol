@@ -39,8 +39,6 @@ export default function CreateUsuario() {
     }
   }
 
-  const [disab, setDisab] = useState(true);
-
   return (
     <div className="container">
       <div className="row justify-content-center">

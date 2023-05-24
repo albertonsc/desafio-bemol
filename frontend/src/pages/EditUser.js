@@ -9,13 +9,7 @@ import Http from "../http";
 export default function EditUsuario() {
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({});
-  const [check, setCheck] = useState(false);
   const { id } = useParams();
-
-  //Confere se o checkbox maior de 18 está marcado;
-  const handleChecked = (e) => {
-    setCheck(e.target.checked);
-  };
 
   //Realiza a requisição da API CEP
   async function fetchZipCode(value) {

@@ -9,7 +9,7 @@ services:
       DB_HOST: db
       DB_DATABASE: laravel
       DB_USERNAME: root
-      DB_PASSWORD:
+      DB_PASSWORD: root
 
 
     ports:
@@ -43,6 +43,8 @@ services:
       MYSQL_DATABASE: laravel
       MYSQL_USER: root
       MYSQL_PASSWORD: root
+      ports:
+        - 3306:3306
     volumes:
       - .dbdata:/var/lib/mysql
     networks:
