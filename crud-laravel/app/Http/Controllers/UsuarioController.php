@@ -15,6 +15,7 @@ class UsuarioController extends Controller
         return response()->json(Usuario::latest()->get());
     }
 
+    
     /**
      * Show the form for creating a new resource.
      */

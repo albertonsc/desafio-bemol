@@ -53,12 +53,11 @@ export default function EditUsuario() {
   };
 
   const EditeUser = () => {
-    Http.put("/usuarios/"+id ,inputs).then((res) => {
+    Http.put("/usuarios/" + id, inputs).then((res) => {
       navigate("/");
       console.log("Sucess!!");
     });
   };
-
 
   return (
     <div className="container">

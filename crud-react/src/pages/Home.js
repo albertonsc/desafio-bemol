@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   const deleteUser = (id) => {
-    http.delete("/usuarios/"+id).then((res) => {
+    http.delete("/usuarios/" + id).then((res) => {
       fetchAllUsuarios();
     });
   };
@@ -25,9 +25,6 @@ export default function Home() {
     <div>
       <h2>Lista de Usuários...</h2>
       <table className="table">
-
-
-
         <thead>
           <tr>
             <td>Dados do Usuário</td>
@@ -35,35 +32,34 @@ export default function Home() {
           </tr>
         </thead>
 
-
         <tbody>
           {usuarios.map((usuario, index) => (
             <tr key={usuario.id}>
-                <td>
-                    <ul>
-                        <li>Nº: {++index}</li>
-                        <li>Nome: {usuario.nome}</li>
-                        <li>Email: {usuario.email}</li>
-                        <li>CPF: {usuario.cpf}</li>
-                        <li>Data de Nascimento: {usuario.nascimento}</li>
-                        <li>Telefone: {usuario.telefone}</li>
-                        <li>CEP: {usuario.cep}</li>
-                        <li>Estado: {usuario.uf}</li>
-                        <li>Cidade: {usuario.localidade}</li>
-                        <li>Bairro: {usuario.bairro}</li>
-                    </ul>
-                </td>
+              <td>
+                <ul>
+                  <li>Nº: {++index}</li>
+                  <li>Nome: {usuario.nome}</li>
+                  <li>Email: {usuario.email}</li>
+                  <li>CPF: {usuario.cpf}</li>
+                  <li>Data de Nascimento: {usuario.nascimento}</li>
+                  <li>Telefone: {usuario.telefone}</li>
+                  <li>CEP: {usuario.cep}</li>
+                  <li>Estado: {usuario.uf}</li>
+                  <li>Cidade: {usuario.localidade}</li>
+                  <li>Bairro: {usuario.bairro}</li>
+                </ul>
+              </td>
               <td>
                 <Link
                   className="btn btn-info"
-                  to={{ pathname: "/edit/"+usuario.id }}
+                  to={{ pathname: "/edit/" + usuario.id }}
                 >
                   Editar
                 </Link>
                 &nbsp;
                 <Link
                   className="btn btn-primary"
-                  to={{ pathname: "/list/"+usuario.id }}
+                  to={{ pathname: "/list/" + usuario.id }}
                 >
                   Ver
                 </Link>
